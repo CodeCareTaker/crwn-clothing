@@ -26,11 +26,11 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const AddButton = styled(CustomButton)`
+export const CartAddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
   position: absolute;
-  top: 155px;
+  top: 255px;
   display: none;
 
   @media screen and (max-width: 800px) {

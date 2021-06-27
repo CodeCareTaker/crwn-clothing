@@ -36,23 +36,12 @@ const shopReducer = ( state = INITIAL_STATE, action ) => {
         isFetching: false,
         errorMessage: action.payload
       };
-      // case ShopActionTypes.FETCH_ITEM_START:
-      // return {
-      //   ...state,
-      //   isFetching: true
-      // };
     case ShopActionTypes.FETCH_ITEM:
       return {
         ...state,
         isFetching: false,
         item: selectSingleItem(action.payload)
       };
-    // case ShopActionTypes.FETCH_ITEM_FAILURE:
-    //   return {
-    //     ...state,
-    //     isFetching: false,
-    //     errorMessage: action.payload
-    //   };
     default:
       return state;
   }

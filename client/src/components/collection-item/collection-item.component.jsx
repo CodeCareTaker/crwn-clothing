@@ -1,11 +1,10 @@
 import React from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { withRouter } from 'react-router';
 import { useHistory } from 'react-router-dom';
 
 import { addItem } from '../../redux/cart/cart.actions';
 import { fetchItem } from '../../redux/shop/shop.actions';
-import { selectItem } from '../../redux/shop/shop.selectors';
 
 import {
   CollectionItemContainer,
@@ -31,8 +30,8 @@ const CollectionItem = ({ match, item }) => {
         <PriceContainer>{price}</PriceContainer>
       </CollectionFooterContainer>
        <DetailButton onClick={() => {
-          //dispatch(fetchItem(item), history.push(`${match.url}/${item.id}`));
-          dispatch(fetchItem(item), alert(`${match.url}/${item.id}`));
+           dispatch(fetchItem(item), history.push(`${match.url}/${item.id}`));
+          // dispatch(fetchItem(item), alert(`${match.url}/${item.id}`));
         }} inverted>
           See Product Details
       </DetailButton>

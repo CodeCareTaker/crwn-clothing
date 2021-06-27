@@ -27,11 +27,8 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
           path={`${match.path}/:collectionId`} 
           component={ CollectionPageContainer }
         />
-        <Route
-          exact 
-          path={`${match.path}/:itemId`} shows component in collection component
-          //path={'/singleItem'} Simple test route breaks 
-          //path={'/shop/singleItem'} Simple test route which shows no component
+        <Route 
+          path={`${match.path}/:itemId`}
           component={ ProductPage }
         /> 
       </Suspense>

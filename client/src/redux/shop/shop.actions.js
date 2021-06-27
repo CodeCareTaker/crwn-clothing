@@ -19,19 +19,10 @@ export const fetchCollectionsFailure = errorMessage => ({
   payload: errorMessage
 });
 
-// export const fetchItemStart = () => ({
-//   type: ShopActionTypes.FETCH_ITEM_START
-// })
-
 export const fetchItem = item => ({
   type: ShopActionTypes.FETCH_ITEM,
   payload: item
 });
-
-// export const fetchItemFailure = errorMessage => ({
-//   type: ShopActionTypes.FETCH_ITEM_FAILURE,
-//   payload: errorMessage
-// });
 
 export const fetchCollectionsStartAsync = () => {
   return dispatch => {
