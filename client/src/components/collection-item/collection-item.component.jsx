@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 import { addItem } from '../../redux/cart/cart.actions';
 import { fetchItem } from '../../redux/shop/shop.actions';
-import { selectedItem } from '../../redux/shop/shop.selectors';
+import { selectItem } from '../../redux/shop/shop.selectors';
 
 import {
   CollectionItemContainer,

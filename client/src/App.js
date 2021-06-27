@@ -12,6 +12,7 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
+const ProductPage = lazy(() => import('./components/product/product.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUp = lazy(() => import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'));
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
@@ -38,6 +39,7 @@ const App = () => {
               currentUser ? (<Redirect to='/' />) : (<SignInAndSignUp />)
             } 
             />
+            <Route exact path='/product' component={ ProductPage } />
           </Suspense>
         </ErrorBoundary>
       </Switch>

@@ -11,13 +11,14 @@ import {
   AddButton
 } from './product.styles';
 
-const ProductPage = ({ selectingItem }) => {
-  //const { id, name, imageUrl, price } = item;
+const ProductPage = ({ item }) => {
+   const { id, name, imageUrl, price } = item;
   
   return (
     <ProductPageContainer>
-       {/*<ProductName>{item.name}</ProductName>
-      <ImageContainer>
+      Test
+       <ProductName>{name}</ProductName>
+      {/*<ImageContainer>
         <img src={item.imageUrl} alt='item' />
       </ImageContainer>
       <ProductPrice>{item.price}</ProductPrice> */}
@@ -25,11 +26,11 @@ const ProductPage = ({ selectingItem }) => {
   );
 };
 
-// const mapStateToProps = state => ({
-//   selectingItem: selectItem(state.shop.item)
-// });
+const mapStateToProps = (state) => ({
+  item: selectItem(state.shop.item)
+});
 
-// export default connect(mapStateToProps)(ProductPage);
+export default connect(mapStateToProps)(ProductPage);
 
-export default ProductPage;
+// export default ProductPage;
 

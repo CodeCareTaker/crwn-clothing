@@ -1,19 +1,28 @@
 import ShopActionTypes from './shop.types';
 import { selectSingleItem } from './shop.utils';
 
-const INITIAL_STATE = {
-  collections: null,
-  isFetching: false,
-  errorMessage: undefined,
-  item: null
-}
+
+const defaultItem = 
+  {
+    id: 0,
+    name: 'default',
+    imageUrl: 1,
+    price: 0
+  };
+
+  const INITIAL_STATE = {
+    collections: null,
+    isFetching: false,
+    errorMessage: undefined,
+    item: defaultItem
+  }
 
 const shopReducer = ( state = INITIAL_STATE, action ) => {
   switch(action.type) {
     case ShopActionTypes.FETCH_COLLECTIONS_START:
       return {
         ...state,
-        isFetching: true,
+        isFetching: true
       };
     case ShopActionTypes.FETCH_COLLECTIONS_SUCCESS:
       return {
