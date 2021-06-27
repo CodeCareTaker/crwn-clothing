@@ -11,7 +11,7 @@ import {
   AddButton
 } from './product.styles';
 
-const ProductPage = ({ item }) => {
+const ProductPage = ({ selectingItem }) => {
   //const { id, name, imageUrl, price } = item;
   
   return (
@@ -26,7 +26,7 @@ const ProductPage = ({ item }) => {
 };
 
 // const mapStateToProps = state => ({
-//   item: selectItem(state.shop.item)
+//   selectingItem: selectItem(state.shop.item)
 // });
 
 // export default connect(mapStateToProps)(ProductPage);

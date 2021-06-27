@@ -26,16 +26,6 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const CollectionItemsContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
-
-  & > div {
-    margin-bottom: 30px;
-  }
-`;
-
 export const AddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
