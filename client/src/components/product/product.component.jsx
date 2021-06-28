@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { selectItem } from '../../redux/shop/shop.selectors';
+
 import {
   ProductPageContainer,
   ProductName,
@@ -24,9 +26,14 @@ const ProductPage = ({ item }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
+  // collection: selectCollection(ownProps.match.params.collectionId)(state),
   item: (state.shop.item)
 });
+
+// const mapStateToProps = (state, ownProps) => ({
+//   item: getItem(ownProps.match.params.itemId)(state)
+// });
 
 export default connect(mapStateToProps)(ProductPage);
 

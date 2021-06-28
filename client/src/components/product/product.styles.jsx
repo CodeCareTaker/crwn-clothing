@@ -19,19 +19,27 @@ export const ProductPrice = styled.h2`
 export const ImageContainer = styled.div`
   width: 23%;
   padding-right: 15px;
+  margin: 100px 700px;
+  position: auto;
 
   img {
     width: 100%;
     height: 100%;
+  }
+  @media screen and (max-width: 800px) {
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    padding: 0 10px;
+    margin: 0px 10px;
   }
 `;
 
 export const CartAddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
-  position: absolute;
+  position: center;
   top: 255px;
-  display: none;
 
   @media screen and (max-width: 800px) {
     display: block;

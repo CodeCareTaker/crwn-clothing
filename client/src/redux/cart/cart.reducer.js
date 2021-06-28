@@ -41,7 +41,3 @@ const cartReducer = (state = INITIAL_STATE, action) => {
 };
 
 export default cartReducer;
-
-// item: state.collections.items.filter(
-//   item => item.id)
-// )

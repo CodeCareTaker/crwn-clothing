@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import CustomButton from '../../components/custom-button/custom-button.component';
 
 export const CollectionPageContainer = styled.div`
   display: flex;

@@ -28,6 +28,7 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
           component={ CollectionPageContainer }
         />
         <Route 
+          //exact  I've tried adding exact but this causes the component to never load
           path={`${match.path}/:itemId`}
           component={ ProductPage }
         /> 
