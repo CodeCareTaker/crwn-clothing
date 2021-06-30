@@ -24,6 +24,14 @@ export const fetchItem = item => ({
   payload: item
 });
 
+export const fetchDefaultItem = () => ({
+  type: ShopActionTypes.FETCH_DEFAULT_ITEM
+});
+
+export const toggleItemHidden = () => ({
+  type: ShopActionTypes.TOGGLE_CART_HIDDEN
+});
+
 export const fetchCollectionsStartAsync = () => {
   return dispatch => {
     const collectionRef = firestore.collection('collections');

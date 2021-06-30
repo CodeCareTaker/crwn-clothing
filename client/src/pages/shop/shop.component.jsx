@@ -11,9 +11,18 @@ const CollectionPageContainer = lazy(() => import('../collection/collection.cont
 const ProductPage = lazy(() => import('../../components/product/product.component'));
 
 const ShopPage = ({ fetchCollectionsStart, match }) => {
+
   useEffect(() => {
     fetchCollectionsStart();
   }, [fetchCollectionsStart]);
+
+  // useEffect(() => {
+  //   if(collections.title === "Default") {
+  //     fetchCollectionsStart();
+  //   }
+  //   }, [fetchCollectionsStart])
+  
+
   
   return (
     <div className='shop-page'>
@@ -27,15 +36,20 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
           path={`${match.path}/:collectionId`} 
           component={ CollectionPageContainer }
         />
-        <Route 
+        {/* <Route 
           //exact  I've tried adding exact but this causes the component to never load
+          // path={`${match.path}/product/:itemId`}
           path={`${match.path}/:itemId`}
           component={ ProductPage }
-        /> 
+        />  */}
       </Suspense>
     </div>
   );
 }
+
+// const mapStateToProps = (state) => ({
+//   collections: (state.shop.collections) 
+// });
 
 const mapDispatchToProps = dispatch => ({
   fetchCollectionsStart: () => dispatch(fetchCollectionsStart())

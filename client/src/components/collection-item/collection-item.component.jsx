@@ -1,10 +1,11 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { withRouter } from 'react-router';
 import { useHistory } from 'react-router-dom';
 
 import { addItem } from '../../redux/cart/cart.actions';
 import { fetchItem } from '../../redux/shop/shop.actions';
+import { selectItem } from '../../redux/shop/shop.selectors';
 
 import {
   CollectionItemContainer,
@@ -17,18 +18,18 @@ import {
 } from './collection-item.styles';
 
 const CollectionItem = ({ match, item }) => {
+  let itemCheck = useSelector(selectItem);
   const dispatch = useDispatch();
   const history = useHistory();
   
   const { name, price, imageUrl } = item;
-
   return (
     <CollectionItemContainer>
-      <BackgroundImage className='image' imageUrl={imageUrl} />
+      <BackgroundImage className='image' imageUrl={imageUrl} /> 
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
         <PriceContainer>{price}</PriceContainer>
-      </CollectionFooterContainer>
+      </CollectionFooterContainer> 
        <DetailButton onClick={() => {
            dispatch(fetchItem(item), history.push(`${match.url}/${item.id}`));
           // dispatch(fetchItem(item), alert(`${match.url}/${item.id}`));
