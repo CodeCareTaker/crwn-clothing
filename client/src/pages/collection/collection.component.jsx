@@ -17,6 +17,7 @@ import {
   ProductName,
   ProductPrice,
   ImageContainer,
+  ProductButtonContainer,
   CartAddButton,
   BackButton
 } from './collection.styles';
@@ -44,9 +45,11 @@ const CollectionPage = ({ collection }) => {
         <ImageContainer>
           <img src={itemCheck.imageUrl} alt='item' />
         </ImageContainer>
+        <ProductButtonContainer>
         <CartAddButton onClick={() => dispatch(addItem(itemCheck))}>Add</CartAddButton>
         <BackButton onClick={() => dispatch(fetchDefaultItem())}>Back To Collection</BackButton>
-        <ProductPrice>{itemCheck.price}</ProductPrice>
+        </ProductButtonContainer>
+        <ProductPrice>${itemCheck.price}</ProductPrice>
       </ProductPageContainer>
     );
   }

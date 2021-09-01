@@ -4,6 +4,8 @@ import CustomButton from '../../components/custom-button/custom-button.component
 export const CollectionPageContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const CollectionTitle = styled.h2`
@@ -24,6 +26,8 @@ export const CollectionItemsContainer = styled.div`
 export const ProductPageContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ProductName = styled.h2`
@@ -38,9 +42,8 @@ export const ProductPrice = styled.h2`
 
 export const ImageContainer = styled.div`
   width: 23%;
-  padding-right: 15px;
-  margin: 100px 700px;
-  position: auto;
+  display: block;
+  margin: auto;
 
   img {
     width: 100%;
@@ -50,13 +53,16 @@ export const ImageContainer = styled.div`
     display: block;
     opacity: 0.9;
     min-width: unset;
-    padding: 0 10px;
-    margin: 0px 10px;
   }
 `;
 
+export const ProductButtonContainer = styled.div`
+  padding-right: 170px;
+  margin: 0 auto 30px;
+`;
+
 export const CartAddButton = styled(CustomButton)`
-  width: 80%;
+  width: 200%;
   opacity: 0.7;
   position: center;
   top: 255px;
@@ -70,7 +76,7 @@ export const CartAddButton = styled(CustomButton)`
 `;
 
 export const BackButton = styled(CustomButton)`
-  width: 80%;
+  width: 200%;
   opacity: 0.7;
   position: center;
   top: 255px;
